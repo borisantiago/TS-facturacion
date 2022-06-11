@@ -26,10 +26,10 @@
   
       cantidadTotal(): number {
       return this.cantidad * this.precioUnitario;
-    }
-    imprimirTabla(): string {
-        return `\nNombre: ${this.nombre} \nCodigo: ${this.id} \nPrecio/u: $${this.precioUnitario} * cantidad ( ${ this.cantidad } ) \nTotal = $${this.cantidadTotal()}\n`;
-    }
+      }
+      imprimirTabla(): string {
+          return `\nNombre: ${this.nombre} \nCodigo: ${this.id} \nPrecio/u: $${this.precioUnitario} * cantidad ( ${ this.cantidad } ) \nTotal = $${this.cantidadTotal()}\n`;
+      }
   
   }
   
@@ -39,7 +39,7 @@
   }
   
   //instanciacion de objetos
-  export class FaturaImp implements FacturaI {
+  export class FacturaImp implements FacturaI {
     public id: number | string = 0;
     public fechaRegistro: Date = new Date();
     public estado: string = "";
@@ -93,7 +93,7 @@
         productoB.precioUnitario = 50;
         productoB.cantidad = 2;
   
-  var facturar = new FaturaImp();
+  var facturar = new FacturaImp();
         facturar.iva = 12;
         facturar.productos.push(productoA);
         facturar.productos.push(productoB);
